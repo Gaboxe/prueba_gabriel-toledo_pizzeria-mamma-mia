@@ -1,8 +1,14 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Button, ListGroup, Card, Row, Col } from "react-bootstrap";
 
 
+
+
 export default function Pizzas() {
+
+    const {idPizzaToWatch} = useParams('');
+
+    console.log(idPizzaToWatch)
 
     return (
         <div className="mt-5">
@@ -23,7 +29,7 @@ export default function Pizzas() {
                     </ListGroup> */}
                     <br />
                     <h5>$pizza.price</h5>
-                    <Button variant="primary">Ver Mas</Button>
+
                     <Button variant="danger">Añadir</Button>
                 </Card.Body>
             </Card>
