@@ -10,19 +10,21 @@ export default function MyNavbar() {
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/home">Pizzas</Navbar.Brand>
+          <Navbar.Brand href="/">Pizzas</Navbar.Brand>
 
           <Nav className="ms-auto">
             <Nav.Item>
-              <NavLink className={setActiveClass}  to="/home"> Home </NavLink> 
+              <NavLink className={setActiveClass} to="/"> Home </NavLink>
             </Nav.Item>
             {/* <Nav.Item className="ms-4">
               <NavLink className={setActiveClass} to="/pizzas"> Pizzas </NavLink>
             </Nav.Item> */}
             <Nav.Item className="ms-4">
               <NavLink className={setActiveClass} to="/carrito"> Carrito </NavLink>
+              <h2 className="text-white">$ --- </h2>
             </Nav.Item>
           </Nav>
+
         </Container>
       </Navbar>
     </div>

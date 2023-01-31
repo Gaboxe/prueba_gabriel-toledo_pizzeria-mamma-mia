@@ -5,14 +5,14 @@ export default function Carrito() {
 
     return (
         <div className="mt-5">
-            {/* <Card className="m-3" style={{ width: '18rem' }} key={pizza.id}> */}
+            <Card className="m-3" style={{ width: '18rem' }} key=''>
             <Card.Img variant="top" src='' />
             <Card.Body>
                 {/* <Card.Title>{pizza.name}</Card.Title> */}
                 <h5>Ingredientes:</h5>
 
                 <br />
-                
+
                 <h5>$---</h5>
                 <br />
                 <div>
@@ -21,7 +21,7 @@ export default function Carrito() {
                     <Button variant="danger">-</Button>
                 </div>
             </Card.Body>
-            {/* </Card> */}
+            </Card>
         </div>
     );
 }

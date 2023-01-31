@@ -17,9 +17,11 @@ function App() {
 
   const [listPizzas, setPizzas] = useState('');
 
-  useEffect(()=>{
+  const [statePizza, setStatePizza] = useState([]);
+
+  useEffect(() => {
     getPizzas();
-  },[]);
+  }, []);
 
   const getPizzas = async () => {
     const endpoint = './pizzas.json'
@@ -32,14 +34,13 @@ function App() {
   return (
     <div className="App">
 
-      <MyContext.Provider value={{ listPizzas }}>
+      <MyContext.Provider value={{ listPizzas, statePizza, setStatePizza }}>
 
         <BrowserRouter>
           <MyNavbar />
-
+          {/* <Home /> */}
           <Routes>
-            <Route path="/home" element={<Home />} />
-            {/* <Route path="/pizzas" element={<Pizzas />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/pizza/:id" element={<Pizzas />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path='*' element={<NoMatch />} />
